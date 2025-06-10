@@ -1,5 +1,4 @@
 <script lang="ts">
-
   let features = $state([
     {
       Title: "Browse through moments",
@@ -23,24 +22,6 @@
       Icon: "Feature3Icon.svg.svg",
     },
   ]);
-
-  let cardsVisible = $state([]);
-
-  $inspect(cardsVisible)
-
-  /** @type {import('svelte/action').Action} */
-  function myaction(node, options) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          cardsVisible[options] = true
-        } else {
-          cardsVisible[options] = false
-        }
-      });
-    });
-    observer.observe(node)
-  }
 </script>
 
 <section
@@ -58,18 +39,17 @@
   </div>
 
   <!-- Feature Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-6 2xl:mx-32 mt-10">
     {#each features as feature, i}
       <div
-        use:myaction={i}
         class="bg-skyblue-1 rounded-md p-3 border-skyblue-4 shadow-xl border"
       >
-        <img src="/{feature.Img}" alt="Analyse" class="rounded-md" />
+        <img src="/{feature.Img}" alt="Analyse" class="rounded-md " />
         <div class="flex gap-2">
           <img src="/Icons/{feature.Icon}" alt="-" />
-          <h1 class="text-2xl text-white-1 font-bold">{feature.Title}</h1>
+          <h1 class="text-xl text-white-1 font-bold">{feature.Title}</h1>
         </div>
-        <p class="text-white-2 pb-3">
+        <p class="text-white-2 text-base pb-3">
           {feature.Description}
         </p>
       </div>
