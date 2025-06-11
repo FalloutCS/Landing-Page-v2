@@ -2,8 +2,6 @@
   import NumberFlow, { continuous } from "@number-flow/svelte";
   import { observeElement } from "$lib/utils.js";
 
-  // I'm trying to grasp observing elements and also add a animation to the numbers. I thought by changing the numbers when
-  // the element is visible, this will trigger the animation of Number flow.
   let numbers = $state([
     {
       Amount: 0,
@@ -23,16 +21,17 @@
     if (isVisible) {
       switch (i) {
         case 0:
-          numbers[i].Amount = 50
+          numbers[i].Amount = 50;
           break;
         case 1:
-          numbers[i].Amount = 25
+          numbers[i].Amount = 25;
           break;
         case 2:
-          numbers[i].Amount = 10
+          numbers[i].Amount = 10;
           break;
         default:
           // optional: handle unexpected index
+          numbers[i].Amount = 25;
           break;
       }
     } else {
@@ -42,17 +41,11 @@
 </script>
 
 <section
-  class="bg-radial from-skyblue-3 from-10% to-skyblue-5 text-white-1 p-10"
+  class="bg-skyblue-5 text-white-1 p-10"
 >
-  <!-- Waves IMG -->
-  <img
-    src="/waves1.svg"
-    alt=""
-    class="absolute top-0 left-0 w-full h-full object-cover opacity-20 pointer-events-none z-0"
-  />
 
   <!-- Title -->
-  <div class="mt-10 text-center">
+  <div class="text-center">
     <h1 class="text-2xl md:text-3xl xl:text-4xl text-white-1 font-bold">
       Our solution is based on interview with:
     </h1>

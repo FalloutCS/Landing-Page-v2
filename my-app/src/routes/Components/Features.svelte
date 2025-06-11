@@ -25,7 +25,7 @@
 </script>
 
 <section
-  class="bg-gradient-to-br from-skyblue-1 to-skyblue-5 text-white-1 p-10"
+  class="relative bg-gradient-to-br from-skyblue-1 to-skyblue-5 text-white-1 p-10"
 >
   <!-- Title -->
   <div class="mt-10 text-center">
@@ -39,12 +39,14 @@
   </div>
 
   <!-- Feature Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-6 2xl:mx-32 mt-10">
+  <div
+    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-6 2xl:mx-32 mt-10"
+  >
     {#each features as feature, i}
       <div
         class="bg-skyblue-1 rounded-md p-3 border-skyblue-4 shadow-xl border"
       >
-        <img src="/{feature.Img}" alt="Analyse" class="rounded-md " />
+        <img src="/{feature.Img}" alt="Analyse" class="rounded-md" />
         <div class="flex gap-2">
           <img src="/Icons/{feature.Icon}" alt="-" />
           <h1 class="text-xl text-white-1 font-bold">{feature.Title}</h1>
@@ -54,5 +56,15 @@
         </p>
       </div>
     {/each}
+  </div>
+
+  <div class="h-20 md:h-32 lg:h-40 2xl:h-60"></div>
+
+  <div class="w-full overflow-hidden">
+    <img
+      src="/waves1.svg"
+      alt="decorative wave"
+      class="absolute bottom-0 left-0 w-full pointer-events-none select-none"
+    />
   </div>
 </section>
