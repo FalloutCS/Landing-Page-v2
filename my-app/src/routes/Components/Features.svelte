@@ -1,4 +1,5 @@
 <script lang="ts">
+  import {observeElement} from "$lib/utils"
   let features = $state([
     {
       Title: "Browse through moments",
@@ -22,6 +23,14 @@
       Icon: "Feature3Icon.svg.svg",
     },
   ]);
+
+  // Start adding the animation for the cards, maybe even using % to check for even and odd numbers that will influence the animation direction.
+
+  function startAnimation(isVisible, i){
+    if (isVisible) {
+
+    }
+  }
 </script>
 
 <section
@@ -44,6 +53,7 @@
   >
     {#each features as feature, i}
       <div
+        use:observeElement={{ callback: startAnimation, index: i }}
         class="bg-skyblue-1 rounded-md p-3 border-skyblue-4 shadow-xl border"
       >
         <img src="/{feature.Img}" alt="Analyse" class="rounded-md" />
