@@ -7,6 +7,6 @@ export function observeElement(el, {callback, index}) {
         callback(false, index)
       }
     });
-  });
+  },);
   observer.observe(el);
 }

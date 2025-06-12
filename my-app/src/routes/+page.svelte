@@ -4,6 +4,9 @@
   import Numbers from "./Components/Numbers.svelte";
   import Benefits from "./Components/Benefits.svelte";
   import Solution from "./Components/Solution.svelte";
+  import Onboarding from "./Components/Onboarding.svelte"
+  import Cta from "./Components/Cta.svelte";
+  import Footer from "./Components/Footer.svelte";
 </script>
 
 <svelte:head>
@@ -30,5 +33,11 @@
   <Solution />
 
   <Benefits />
+
+  <Onboarding />
+
+  <Cta />
+<!-- 
+  <Footer /> -->
 
 </main>
