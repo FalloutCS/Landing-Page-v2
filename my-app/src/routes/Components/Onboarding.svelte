@@ -13,7 +13,7 @@
     {
       name: "Upload and analyze moments",
       description:
-        "Our program will automatically extract your saved moments + remove any waste... Afterwards, you analyze your saved moments",
+        "Our program will automatically extract your saved moments + remove any waste...",
       img: "/Onboarding/Uploading.png",
     },
   ]);
@@ -34,7 +34,7 @@
     class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-12 lg:px-32 xl:px-52 mt-10"
   >
     {#each onboardingSteps as onboardingStep}
-      <div class="flex flex-col items-center justify-center text-center">
+      <div class="flex flex-col items-center justify-center text-center p-10">
         <img src={onboardingStep.img} alt="" />
         <h1 class="text-xl text-white-1 font-bold">{onboardingStep.name}</h1>
         <p class="text-white-2 text-center pb-3 justify-self-end">
