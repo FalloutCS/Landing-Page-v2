@@ -14,7 +14,7 @@
 </script>
 
 <section
-  class="relative bg-skyblue-2 text-white-1 pb-10 rounded-b-2xl"
+  class="relative bg-skyblue-2 text-white-1 pb-10"
 >
   <!-- Waves -->
   <div class="w-full overflow-hidden">
@@ -25,7 +25,7 @@
     />
   </div>
 
-  <div class="h-20 md:h-32 lg:h-40 2xl:h-60"></div>
+  <div class="h-20 md:h-32 lg:h-40"></div>
 
   <div class="my-10 text-center">
     <h1 class="text-2xl md:text-3xl xl:text-4xl text-white-1 font-bold">
@@ -93,4 +93,6 @@
       <p class="mt-4 text-center text-red-500">{error}</p>
     {/if}
   </form>
+
+  <div class="h-20 "></div>
 </section>

@@ -23,27 +23,27 @@
     ];
   </script>
   
-  <footer class="bg-primary py-2xl">
-    <div class="container mx-auto px-md">
-      <div class="grid gap-xl md:grid-cols-4">
+  <footer class="bg-skyblue-1 py-10">
+    <div class="container mx-auto px-10">
+      <div class="grid gap-10 md:grid-cols-4">
         <!-- Logo & Description -->
         <div class="md:col-span-2">
-          <img src="/Logo.svg" class="h-10" alt="GrowGG" />
-          <p class="text-secondary-300 mb-6">
+          <img src="/Logo 2 PNG.png" class="h-10" alt="GrowGG" />
+          <p class="text-white-2 ">
             Level up your CS gameplay with professional-grade demo analysis and insights.
           </p>
         </div>
   
         <!-- Social Links -->
         <div>
-          <h4 class="font-header text-lg text-secondary mb-4">Connect</h4>
+          <h4 class="font-header text-2xl text-white-1 mb-4">Connect</h4>
           <div class="flex gap-4">
             {#each socialLinks as { name, url, icon }}
              <a 
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-secondary-300 hover:text-accent-cyan transition-colors duration-200"
+                class="text-white-2 hover:text-NeonBlue-1 transition-colors duration-200"
                 aria-label={name}
               >
                 {@html icon}
@@ -54,13 +54,13 @@
   
         <!-- Legal Links -->
         <div>
-          <h4 class="font-header text-lg text-secondary mb-4">Legal</h4>
+          <h4 class="font-header text-2xl text-white-1 mb-4">Legal</h4>
           <ul class="space-y-2">
             {#each legalLinks as { name, href }}
               <li>
                 <a
                   {href}
-                  class="text-secondary-300 hover:text-accent-cyan transition-colors duration-200"
+                  class="text-white-2 hover:text-NeonBlue-1 transition-colors duration-200"
                 >
                   {name}
                 </a>
@@ -71,12 +71,12 @@
       </div>
   
       <!-- Bottom Bar -->
-      <div class="mt-2xl pt-8 border-t border-secondary-500/20">
+      <div class="mt-10 pt-8 border-t border-white-5/20">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-secondary-300 text-sm">
+          <p class="text-white-3 text-sm">
             © {new Date().getFullYear()} GrowGG. All rights reserved.
           </p>
-          <p class="text-secondary-400 text-sm">
+          <p class="text-white-4 text-sm">
             Made with ❤️ for the CS community
           </p>
         </div>

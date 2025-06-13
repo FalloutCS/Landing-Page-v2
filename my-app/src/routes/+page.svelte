@@ -7,6 +7,7 @@
   import Onboarding from "./Components/Onboarding.svelte"
   import Cta from "./Components/Cta.svelte";
   import Footer from "./Components/Footer.svelte";
+  import Nav from "./Components/Nav.svelte";
 </script>
 
 <svelte:head>
@@ -23,6 +24,7 @@
 </svelte:head>
 
 <main class="bg-gradient-to-br from-skyblue-1 to-skyblue-5">
+  <Nav />
 	<!-- To Do General: Compress images and remove bloat -->
   <Hero />
   <!-- To Do Features: Add Animations: when scrolling in view, and when hovering over -->
@@ -37,7 +39,7 @@
   <Onboarding />
 
   <Cta />
-<!-- 
-  <Footer /> -->
+
+  <Footer />
 
 </main>
