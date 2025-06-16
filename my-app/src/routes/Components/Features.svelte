@@ -40,7 +40,7 @@
 
     // Update on resize
   const updateSize = () => {
-    isXl = window.innerWidth >= 1280; // Tailwind's `xl` starts at 1280px
+    isXl = window.innerWidth >= 768; // Tailwind's `xl` starts at 1280px
   }
 
   onMount(() => {

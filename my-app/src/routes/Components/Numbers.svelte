@@ -41,7 +41,7 @@
 </script>
 
 <section
-  class="bg-skyblue-5 text-white-1 p-10"
+  class="bg-skyblue-5 text-white-1 p-10 xl:px-48"
 >
 
   <!-- Title -->

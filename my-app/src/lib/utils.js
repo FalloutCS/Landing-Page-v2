@@ -10,3 +10,5 @@ export function observeElement(el, {callback, index}) {
   },);
   observer.observe(el);
 }
+
+// Maybe stop observing after the first time it entered viewport?

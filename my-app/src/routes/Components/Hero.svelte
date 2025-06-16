@@ -3,7 +3,7 @@
 </script>
 
 <section
-  class="flex flex-col lg:flex-row lg:justify-evenly lg:text-left justify-center items-center w-full h-screen text-center p-10"
+  class="flex flex-col lg:flex-row lg:justify-evenly lg:text-left justify-center items-center w-full h-screen text-center p-10 lg:px-28 2xl:px-64"
 >
   <div class="lg:w-2/5 mt-10" >
     <h1 class="text-2xl md:text-3xl xl:text-4xl text-white-1 font-bold">
