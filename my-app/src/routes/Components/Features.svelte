@@ -1,12 +1,17 @@
 <script lang="ts">
+  import { observeElement } from "$lib/utils";
+
+  let delay = $state(200)
+  let windowWidth = $state(0)
 
   let features = $state([
     {
-      Title: "Browse through moments",
+      Title: "Save moments",
       Description:
-        "Once you uploaded your demo, you can browse through the moments you saved during your game.",
-      Img: "Features2.png",
+        "Save key moments in your demo during gameplay for instant analysis after your game",
+      Img: "Features1.gif",
       Icon: "Feature1Icon.svg",
+      isVisible: false
     },
     {
       Title: "Browse through moments",
@@ -14,37 +19,31 @@
         "Once you uploaded your demo, you can browse through the moments you saved during your game.",
       Img: "Features2.png",
       Icon: "Feature2Icon.svg",
+      isVisible: false
     },
     {
-      Title: "Browse through moments",
+      Title: "Analyse saved moments",
       Description:
-        "Once you uploaded your demo, you can browse through the moments you saved during your game.",
-      Img: "Features2.png",
+        "In our SnapShot analyzer, you can replay, analyze and share your saved moments.",
+      Img: "Features3.png",
       Icon: "Feature3Icon.svg.svg",
+      isVisible: false
     },
   ]);
 
-  let cardsVisible = $state([]);
-
-  $inspect(cardsVisible)
-
-  /** @type {import('svelte/action').Action} */
-  function myaction(node, options) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          cardsVisible[options] = true
-        } else {
-          cardsVisible[options] = false
-        }
-      });
-    });
-    observer.observe(node)
+  function startAnimation(result, i) {
+    if (result) {
+      features[i].isVisible = true
+    }
   }
+
 </script>
 
+<svelte:window bind:innerWidth={windowWidth} />
+
 <section
-  class="bg-gradient-to-br from-skyblue-1 to-skyblue-5 text-white-1 p-10"
+  id="Features_ID"
+  class="relative bg-gradient-to-br from-skyblue-1 to-skyblue-5 text-white-1 p-10"
 >
   <!-- Title -->
   <div class="mt-10 text-center">
@@ -58,21 +57,35 @@
   </div>
 
   <!-- Feature Cards -->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 gap-6 xl:gap-6 2xl:mx-32 mt-10"
+  >
     {#each features as feature, i}
       <div
-        use:myaction={i}
-        class="bg-skyblue-1 rounded-md p-3 border-skyblue-4 shadow-xl border"
+        use:observeElement={{ callback: startAnimation, index: i }}
+        class="bg-skyblue-1 rounded-md p-3 border-skyblue-4 shadow-xl border transition-opacity transition-transform duration-1000 ease-out
+         {feature.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}"
+         style={windowWidth >= 768 ? `transition-delay: ${i*delay}ms` : ``}
       >
         <img src="/{feature.Img}" alt="Analyse" class="rounded-md" />
         <div class="flex gap-2">
           <img src="/Icons/{feature.Icon}" alt="-" />
-          <h1 class="text-2xl text-white-1 font-bold">{feature.Title}</h1>
+          <h1 class="text-xl text-white-1 font-bold">{feature.Title}</h1>
         </div>
-        <p class="text-white-2 pb-3">
+        <p class="text-white-2 text-base pb-3">
           {feature.Description}
         </p>
       </div>
     {/each}
+  </div>
+
+  <div class="h-20 md:h-32 lg:h-40 2xl:h-60"></div>
+
+  <div class="w-full overflow-hidden">
+    <img
+      src="/waves1.svg"
+      alt="decorative wave"
+      class="absolute bottom-0 left-0 w-full pointer-events-none select-none"
+    />
   </div>
 </section>

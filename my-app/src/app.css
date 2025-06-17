@@ -158,3 +158,24 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* app.css */
+html {
+    scroll-behavior: smooth;
+    background-color: theme('colors.primary.DEFAULT');
+}
+
+/* Optional: Hide scrollbar but keep functionality */
+body {
+    scrollbar-width: thin;
+}
+
+/* For Webkit browsers */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+}
