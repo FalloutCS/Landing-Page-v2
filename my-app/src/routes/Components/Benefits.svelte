@@ -5,26 +5,26 @@
       name: "Save Time",
       description:
         "Instantly mark and revisit key moments — no scrubbing through full demos.",
-      icon: "/Feature1Icon.svg",
+      icon: "/MoreTime.svg",
       isVisible: false,
     },
     {
       name: "Understand",
       description:
         "Review moments that teach. Reflect solo or collaborate with your team.",
-      icon: "/Feature1Icon.svg",
+      icon: "/Understand.svg",
       isVisible: false,
     },
     {
       name: "Improve Fast",
       description: "Jump into analysis right after the match ends.",
-      icon: "/Feature1Icon.svg",
+      icon: "/Sprint.svg",
       isVisible: false,
     },
     {
       name: "Rank Up",
       description: "Turn insights into habits and climb the ladder faster.",
-      icon: "/Feature1Icon.svg",
+      icon: "/Goals.svg",
       isVisible: false,
     },
   ]);
@@ -63,7 +63,7 @@ class="bg-skyblue-1 text-white-1 p-10 relative">
          style="transition-delay: {i * 100}ms"
       >
         <div class="flex gap-2 w-full justify-center items-center">
-          <img src="/Icons/{benefit.icon}" alt="-" />
+          <img src="/Icons/{benefit.icon}" alt="-"/>
           <h1 class="text-xl text-white-1 font-bold">{benefit.name}</h1>
         </div>
         <p class="text-white-2 text-base pb-3">

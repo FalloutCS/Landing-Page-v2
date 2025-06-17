@@ -6,10 +6,10 @@
 
   let features = $state([
     {
-      Title: "Browse through moments",
+      Title: "Save moments",
       Description:
-        "Once you uploaded your demo, you can browse through the moments you saved during your game.",
-      Img: "Features2.png",
+        "Save key moments in your demo during gameplay for instant analysis after your game",
+      Img: "Features1.gif",
       Icon: "Feature1Icon.svg",
       isVisible: false
     },
@@ -22,10 +22,10 @@
       isVisible: false
     },
     {
-      Title: "Browse through moments",
+      Title: "Analyse saved moments",
       Description:
-        "Once you uploaded your demo, you can browse through the moments you saved during your game.",
-      Img: "Features2.png",
+        "In our SnapShot analyzer, you can replay, analyze and share your saved moments.",
+      Img: "Features3.png",
       Icon: "Feature3Icon.svg.svg",
       isVisible: false
     },

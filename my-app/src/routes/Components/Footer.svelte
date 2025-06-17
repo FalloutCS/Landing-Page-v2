@@ -28,7 +28,7 @@
       <div class="grid gap-10 md:grid-cols-4">
         <!-- Logo & Description -->
         <div class="md:col-span-2">
-          <img src="/Logo 2 PNG.png" class="h-10" alt="GrowGG" />
+          <img src="/Logo.svg" class="h-10" alt="GrowGG" />
           <p class="text-white-2 ">
             Level up your CS gameplay with professional-grade demo analysis and insights.
           </p>

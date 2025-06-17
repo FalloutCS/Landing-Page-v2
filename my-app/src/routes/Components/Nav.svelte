@@ -65,7 +65,7 @@
       </div>
       <div class="w-1/3 h-full flex justify-end">
         <button
-          class="rounded-xl bg-NeonBlue-1 px-4 py-1 font-bold text-center text-skyblue-1 cursor-pointer"
+          class="rounded-lg border-1 border-skyblue-1/20 bg-NeonBlue-1 px-4 py-1 font-bold text-center text-skyblue-1 cursor-pointer"
           onclick={() => {
             document.getElementById("waitlist-form").scrollIntoView({
               behavior: "smooth",
