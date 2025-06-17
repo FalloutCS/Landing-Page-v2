@@ -1,7 +1,7 @@
 <script lang="ts">
   import { observeElement } from "$lib/utils";
 
-  let delay = $state(201)
+  let delay = $state(200)
   let windowWidth = $state(0)
 
   let features = $state([
