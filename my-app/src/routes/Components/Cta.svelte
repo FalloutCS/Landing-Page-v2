@@ -14,6 +14,7 @@
 </script>
 
 <section
+    id="waitlist-form"
   class="relative bg-skyblue-2 text-white-1 pb-10"
 >
   <!-- Waves -->
@@ -34,7 +35,6 @@
   </div>
 
   <form
-    id="waitlist-form"
     method="POST"
     use:enhance={() => {
       return async ({ result }) => {
