@@ -36,7 +36,9 @@
   }
 </script>
 
-<section class="bg-skyblue-1 text-white-1 p-10 relative">
+<section 
+id="Benefits_ID"
+class="bg-skyblue-1 text-white-1 p-10 relative">
   <!-- Title -->
   <div class="mt-10 text-center">
     <h1 class="text-2xl md:text-3xl xl:text-4xl text-white-1 font-bold">

@@ -19,14 +19,14 @@
   ]);
 </script>
 
-<section class="bg-skyblue-5 p-10">
+<section id="How It Works_ID" class="bg-skyblue-5 p-10">
   <!-- Title -->
   <div class="mt-10 text-center">
     <h1 class="text-2xl md:text-3xl xl:text-4xl text-white-1 font-bold">
       How it works
     </h1>
     <p class="text-white-2 text-xl xl:text-2xl pb-3">
-        It's easy, and effective...
+      It's easy, and effective...
     </p>
   </div>
 

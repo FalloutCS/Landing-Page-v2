@@ -1,9 +1,8 @@
 <script lang="ts">
   import { observeElement } from "$lib/utils";
-  import { onMount } from 'svelte';
 
   let delay = $state(200)
-  let isXl = $state(false)
+  let windowWidth = $state(0)
 
   let features = $state([
     {
@@ -38,19 +37,12 @@
     }
   }
 
-    // Update on resize
-  const updateSize = () => {
-    isXl = window.innerWidth >= 768; // Tailwind's `xl` starts at 1280px
-  }
-
-  onMount(() => {
-    updateSize();
-    window.addEventListener('resize', updateSize);
-    return () => window.removeEventListener('resize', updateSize);
-  });
 </script>
 
+<svelte:window bind:innerWidth={windowWidth} />
+
 <section
+  id="Features_ID"
   class="relative bg-gradient-to-br from-skyblue-1 to-skyblue-5 text-white-1 p-10"
 >
   <!-- Title -->
@@ -73,7 +65,7 @@
         use:observeElement={{ callback: startAnimation, index: i }}
         class="bg-skyblue-1 rounded-md p-3 border-skyblue-4 shadow-xl border transition-opacity transition-transform duration-1000 ease-out
          {feature.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'}"
-         style={isXl ? `transition-delay: ${i*delay}ms` : ``}
+         style={windowWidth >= 768 ? `transition-delay: ${i*delay}ms` : ``}
       >
         <img src="/{feature.Img}" alt="Analyse" class="rounded-md" />
         <div class="flex gap-2">
