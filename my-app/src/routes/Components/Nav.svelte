@@ -37,7 +37,7 @@
       : ''}"
   >
     {#if windowWidth <= 1024}
-      <img src="/Logo.svg" class="size-7" alt="GROW" />
+      <img src="/Logo.webp" class="size-7" alt="GROW" />
 
       <!-- Only for mobile -->
       <button onclick={(menuOpen = !menuOpen)} class="cursor-pointer lg:hidden">
@@ -49,7 +49,7 @@
       </button>
     {:else}
       <div class="w-1/3 h-full flex">
-        <img src="/Logo.svg" class="size-7" alt="GROW" />
+        <img src="/Logo.webp" class="size-7" alt="GROW" />
       </div>
       <div class="w-1/3 h-full flex justify-center gap-3">
         {#each pages as page}
