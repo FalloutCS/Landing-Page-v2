@@ -17,7 +17,7 @@
       Title: "Browse through moments",
       Description:
         "Once you uploaded your demo, you can browse through the moments you saved during your game.",
-      Img: "Features2.png",
+      Img: "Features2.jpg",
       Icon: "Feature2Icon.svg",
       isVisible: false
     },
@@ -25,7 +25,7 @@
       Title: "Analyse saved moments",
       Description:
         "In our SnapShot analyzer, you can replay, analyze and share your saved moments.",
-      Img: "Features3.png",
+      Img: "Features3.jpg",
       Icon: "Feature3Icon.svg.svg",
       isVisible: false
     },
