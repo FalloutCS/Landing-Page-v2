@@ -6,20 +6,20 @@
     {
       name: "While playing a game...",
       description: "Wether it be a Pug, Scrim or Official",
-      img: "/Onboarding/Playing.png",
+      img: "/Onboarding/Playing.webp",
       isVisible: false,
     },
     {
       name: "Save learning moments",
       description: "Type your costumised keyword in the in game chat",
-      img: "/Onboarding/Saving.png",
+      img: "/Onboarding/Saving.webp",
       isVisible: false,
     },
     {
       name: "Upload and analyze moments",
       description:
         "Our program will automatically extract your saved moments + remove any waste...",
-      img: "/Onboarding/Uploading.png",
+      img: "/Onboarding/Uploading.webp",
       isVisible: false,
     },
   ]);
