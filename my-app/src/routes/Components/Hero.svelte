@@ -30,6 +30,6 @@
     loop
     muted
     playsinline
-    class="rounded-2xl w-full lg:w-3/5 max-w-2xl lg:max-w-4xl"
+    class="rounded-2xl mt-2.5 lg:mt-0 w-full lg:w-3/5 max-w-2xl lg:max-w-4xl"
   />
 </section>
